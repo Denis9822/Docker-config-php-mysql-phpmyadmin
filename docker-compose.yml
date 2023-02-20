@@ -6,7 +6,7 @@ services:
       - "8876:80"
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
-      - ./.:/var/www/public/
+      - ./public/.:/var/www/public/
     container_name: app_nginx
     depends_on:
       - php
@@ -15,7 +15,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./:/var/www/public
+      - ./public/:/var/www/public/
   db:
     image: mysql:latest
     restart: always

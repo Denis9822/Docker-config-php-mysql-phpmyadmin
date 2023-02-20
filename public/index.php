@@ -1,1 +1,2 @@
-asdsad
+<?php
+echo "hello world";
